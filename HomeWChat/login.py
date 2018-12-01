@@ -2,21 +2,34 @@
 # Date: 2018-11-03
 # Desc: Any question Pls contact eckoqzhang@163.com
 
-class CLogin(obj):
-    def __init__(appid, 
-                 secret, 
-                 js_code='JSCODE',
+import sys
+
+from utils.http import CHttp
+import conf
+
+class CLogin(object):
+    def __init__(self,
+                 js_code,
+                 appid = conf.AppID, 
+                 secret = conf.AppSecret, 
                  grant_type='authorization_code'):
 
         self._appid = appid
-        self.secret = secret
+        self._secret = secret
         self._js_code = js_code
         self._grant_type = grant_type
         self._login_url = "https://api.weixin.qq.com/sns/jscode2session?"
-    
-   def login()
 
-
+    def login(self):
+        data = {
+                "appid" : self._appid,
+                "secret": self._secret,
+                "js_code": self._js_code,
+                "grant_type" : self._grant_type
+               }
+        login_http = CHttp(self._login_url, data)
+        return login_http.http_get()
 
 if __name__ == "__main__":
-    print "hello world"
+    obj = CLogin("081MMGMS1vPOO41sMLKS1qyDMS1MMGMt")
+    print obj.login()
