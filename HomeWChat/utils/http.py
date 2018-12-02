@@ -65,6 +65,6 @@ class CHttp(object):
     
 if __name__ == "__main__":
     obj = CHttp("https://api.weixin.qq.com/sns/jscode2session", 
-            {"appid": "wxb8464a6ca153234b", "secret":"775b19e5be486091541a6ee0913e457b", "js_code":"021FuRsA1PYbbc051OsA16tNsA1FuRsP", "grant_type":"authorization_code"})
+            {"appid": "", "secret":"", "js_code":"021FuRsA1PYbbc051OsA16tNsA1FuRsP", "grant_type":"authorization_code"})
     print obj.http_get()
     pass

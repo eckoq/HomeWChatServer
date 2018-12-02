@@ -3,14 +3,14 @@
 # Desc: Any question Pls contact eckoqzhang@163.com
 
 # -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
+from django.shortcuts import render
 from django.http import HttpResponse
 
-import json
+# Create your views here.
 
-from login import CLogin
- 
 def hello(request):
-    return HttpResponse("Hello world ! ")
+    return HttpResponse("hello news");
 
-if __name__ == "__main__":
-    pass
+

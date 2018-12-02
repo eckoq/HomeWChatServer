@@ -4,8 +4,8 @@
 
 import sys
 
-from utils.http import CHttp
-import conf
+from HomeWChat.utils.http import CHttp
+from HomeWChat import conf
 
 class CLogin(object):
     def __init__(self,
