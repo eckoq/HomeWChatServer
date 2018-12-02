@@ -18,7 +18,6 @@ def login(request):
         code    = request.POST["code"]
 
     obj = CLogin(code)
-
     data    = json.dumps(obj.login())
     return HttpResponse(data, content_type="application/json")
 

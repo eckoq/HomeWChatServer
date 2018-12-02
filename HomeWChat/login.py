@@ -18,7 +18,7 @@ class CLogin(object):
         self._secret = secret
         self._js_code = js_code
         self._grant_type = grant_type
-        self._login_url = "https://api.weixin.qq.com/sns/jscode2session?"
+        self._login_url = "https://api.weixin.qq.com/sns/jscode2session"
 
     def login(self):
         data = {
@@ -31,5 +31,5 @@ class CLogin(object):
         return login_http.http_get()
 
 if __name__ == "__main__":
-    obj = CLogin("081MMGMS1vPOO41sMLKS1qyDMS1MMGMt")
+    obj = CLogin("071guFmE1Vek070gO0nE1Z7CmE1guFmE")
     print obj.login()
