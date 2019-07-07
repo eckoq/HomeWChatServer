@@ -23,5 +23,5 @@ urlpatterns = [
     url(r'login/', include('login.urls')),
     url(r'news/', include('news.urls')),
     url(r'^admin/', admin.site.urls),
-    url(r'^$', view.hello),
+    url(r'', include('overview.urls')),
 ]

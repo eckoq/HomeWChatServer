@@ -52,7 +52,7 @@ class CHttp(object):
                 return self.__set_errinfo(ERR_HTTP_PARAM, "data is not dict")
             
             params  = json.dumps(self._data)
-            request = urllib2.Request(url, params)
+            request = urllib2.Request(self._url, params)
             request.get_method  = lambda:'POST'
             response    = urllib2.urlopen(request, timeout=600)
             result  = json.loads(response.read(), 'latin_1')

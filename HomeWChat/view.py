@@ -7,8 +7,6 @@ from django.http import HttpResponse
 
 import json
 
-from login import CLogin
- 
 def hello(request):
     return HttpResponse("Hello world ! ")
 

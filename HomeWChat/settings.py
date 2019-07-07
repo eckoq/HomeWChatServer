@@ -28,16 +28,19 @@ DEBUG = True
 ALLOWED_HOSTS = ['132.232.94.178', 'www.nextecko.com', 'nextecko.com']
 
 
-# Application definition
+AUTH_USER_MODEL = 'login.USER'
 
+# Application definition
 INSTALLED_APPS = [
-    'news.apps.NewsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'login',
+    'news',
+    'overview',
 ]
 
 MIDDLEWARE = [
